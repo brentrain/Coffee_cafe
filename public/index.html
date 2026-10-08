@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>The Green Roast Co. | Hand-Pulled & Small Batch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@700;900&family=Special+Elite&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Physical Craft Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-left">
+          <div class="hand-drawn-sun">✺</div>
+          <div class="brand-text">
+            <span class="brand-title">THE GREEN ROAST</span>
+            <span class="brand-caption">BATCH ROASTED • HEARTH FIRED • EST. 1998</span>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="nav-ticket-btn" onclick="toggleChat(true)">
+            <span>Ticket</span> ✎
+          </button>
+          <!-- Tricolor Hamburger Button -->
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+            <span class="bar bar-berry"></span>
+            <span class="bar bar-pistacchio"></span>
+            <span class="bar bar-freshwater"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Desktop Nav & Mobile Drawer Links -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#menu-black" onclick="closeMobileNav()">Drip & Press</a>
+        <a href="#menu-cold" onclick="closeMobileNav()">Cold Steeped</a>
+        <a href="#menu-bakery" onclick="closeMobileNav()">Morning Oven</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Editorial Hero: The Roaster's Chalk & Kraft Desk -->
+  <section class="hero-board">
+    <div class="hero-inner">
+      <div class="roaster-pin">📍</div>
+      <span class="chalk-stamp">BATCH NO. 048 // CURRENT ROTATION</span>
+      <h1>Coffee slow-roasted over wood flame & drawn by hand.</h1>
+      <p class="hero-note">
+        No corporate syrups or pre-ground beans. We hand-whisk ceremonial matcha, calibrate water by the degree, and pull espresso shots one cup at a time.
+      </p>
+      <div class="hero-tasting-tape">
+        <span>CROP ELEVATION: 1,850M</span>
+        <span class="sep">❖</span>
+        <span>ROAST PROFILE: MEDIUM-LIGHT HONEY</span>
+        <span class="sep">❖</span>
+        <span>CURRENT COOPERATIVE: GUATEMALA HUEHUETENANGO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Board Structured as Hanging Paper Tags -->
+  <main class="menu-canvas">
+
+    <!-- 01: Drip & Black Coffee -->
+    <section class="menu-group" id="menu-black">
+      <div class="group-heading">
+        <span class="handwritten-num">01.</span>
+        <h2>Fresh Drip & Single Origin</h2>
+        <span class="curved-line">〰〰〰</span>
+      </div>
+
+      <div class="cards-cluster">
+        <!-- Card 1 -->
+        <article class="kraft-tag tilt-left">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge">LOT 104 • WASHED</span>
+            <span class="tag-price">$3.45</span>
+          </div>
+          <h3>Pike Place Roast</h3>
+          <div class="scribble-notes">Tasting notes: toasted pecan, bittersweet chocolate, brown butter</div>
+          <p>Our workhorse morning drip. Mellow, balanced, roasted daily in cast iron until gently caramelized.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('I would like to order a Pike Place Roast.')">
+            Order This Cup <span>→</span>
+          </button>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="kraft-tag tilt-right">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge dark-badge">OAK FIRED • FULL ROAST</span>
+            <span class="tag-price">$3.65</span>
+          </div>
+          <h3>Dark Roast Bold</h3>
+          <div class="scribble-notes">Tasting notes: molasses, dark pipe tobacco, smoky fudge</div>
+          <p>Pulled long and roasted deep. Heavy body with nearly zero acidity and a rich, persistent finish.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('Can I get a cup of the Dark Roast Bold?')">
+            Order This Cup <span>→</span>
+          </button>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="kraft-tag tilt-slight">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge">DOUBLE PULL</span>
+            <span class="tag-price">$3.95</span>
+          </div>
+          <h3>Caffè Americano</h3>
+          <div class="scribble-notes">Tasting notes: candied orange peel, golden crema, raw sugar</div>
+          <p>Two manual pulls of organic espresso married with bubbling hot mineral spring water.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('I want to order a Caffè Americano.')">
+            Order This Cup <span>→</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- 02: Cold Handcrafted Drinks -->
+    <section class="menu-group" id="menu-cold">
+      <div class="group-heading">
+        <span class="handwritten-num">02.</span>
+        <h2>Hand-Shaken & Cold Elixirs</h2>
+        <span class="curved-line">〰〰〰</span>
+      </div>
+
+      <div class="cards-cluster">
+        <!-- Card 4 -->
+        <article class="kraft-tag highlight-tag tilt-right">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge staff-pick">★ HOUSE SPECIALTY</span>
+            <span class="tag-price">$5.95</span>
+          </div>
+          <h3>Brown Sugar Oat Shaken Espresso</h3>
+          <div class="scribble-notes">Tasting notes: turbinado sugar, cracked cinnamon quill, velvety oat</div>
+          <p>Blonde reserve espresso pulled hot over ice and whole spice, vigorously aerated in a tin shaker.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('I want the Iced Brown Sugar Oatmilk Shaken Espresso.')">
+            Order This Cup <span>→</span>
+          </button>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="kraft-tag tilt-left">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge">20-HR IMMERSION</span>
+            <span class="tag-price">$4.95</span>
+          </div>
+          <h3>Vanilla Sweet Cream Cold Brew</h3>
+          <div class="scribble-notes">Tasting notes: aged bourbon barrel vanilla, dense heavy cream</div>
+          <p>Steeped cold in mountain water overnight and capped with hand-whipped vanilla sweet cream.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('Can I get a Vanilla Sweet Cream Cold Brew?')">
+            Order This Cup <span>→</span>
+          </button>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="kraft-tag tilt-slight">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge">STONE-GROUND UJI</span>
+            <span class="tag-price">$5.25</span>
+          </div>
+          <h3>Ceremonial Matcha Latte</h3>
+          <div class="scribble-notes">Tasting notes: toasted nori, sweet young grass, microfoam</div>
+          <p>Whisked with traditional bamboo chasen to create an earthy, rich emerald green foam.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('I would like to order a Matcha Tea Latte.')">
+            Order This Cup <span>→</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03: Kitchen & Bakehouse -->
+    <section class="menu-group" id="menu-bakery">
+      <div class="group-heading">
+        <span class="handwritten-num">03.</span>
+        <h2>The Hearth & Morning Oven</h2>
+        <span class="curved-line">〰〰〰</span>
+      </div>
+
+      <div class="cards-cluster">
+        <!-- Card 7 -->
+        <article class="kraft-tag tilt-left">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge warm-badge">CAST IRON SKILLET</span>
+            <span class="tag-price">$5.45</span>
+          </div>
+          <h3>Bacon, Gouda & Egg Sandwich</h3>
+          <div class="scribble-notes">Thick applewood bacon, aged Dutch gouda, farm egg, brioche</div>
+          <p>Fired hot in cast iron skillets with salted butter and cracked black peppercorns.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('Can I get a warm Bacon, Gouda and Egg Sandwich?')">
+            Order This Warm <span>→</span>
+          </button>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="kraft-tag tilt-right">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge warm-badge">27-LAYER LAMINATION</span>
+            <span class="tag-price">$3.75</span>
+          </div>
+          <h3>Normandy Butter Croissant</h3>
+          <div class="scribble-notes">Shattering caramelized crust, delicate cultured butter honeycomb</div>
+          <p>Proofed slowly for 48 hours and pulled hot from the stone oven every morning at dawn.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('Please add a warm Butter Croissant to my order.')">
+            Order This Warm <span>→</span>
+          </button>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="kraft-tag tilt-slight">
+          <div class="tag-punchhole"></div>
+          <div class="tag-meta">
+            <span class="lot-badge warm-badge">MOUNTAIN HARVEST</span>
+            <span class="tag-price">$3.95</span>
+          </div>
+          <h3>Wild Blueberry Streusel Muffin</h3>
+          <div class="scribble-notes">Wild blueberries, whole cinnamon crust, raw cane crumble</div>
+          <p>Bursting with tart forest berries and capped with a crunchy nutmeg sugar streusel.</p>
+          <button class="order-scribble-btn" onclick="openChatWithPrompt('Can I add a Blueberry Streusel Muffin?')">
+            Order This Warm <span>→</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Ticket Chat Trigger -->
+  <button class="ticket-tab-trigger" id="chat-trigger" onclick="toggleChat()">
+    <span class="ticket-hole">○</span>
+    <span class="ticket-text">BARISTA TICKET #04</span>
+    <span class="ticket-pencil">✎</span>
+  </button>
+
+  <!-- Analog Roaster Chat Drawer -->
+  <aside class="chat-drawer" id="chat-drawer">
+    <div class="order-pad-header">
+      <div class="receipt-tape-strip">THE GREEN ROAST CO. • ORDER PAD</div>
+      <div class="barista-status">
+        <span class="barista-name">Sam (Lead Barista)</span>
+        <span class="ticket-status">• Pen in hand</span>
+      </div>
+      <button class="pad-close-btn" onclick="toggleChat(false)">✕</button>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="msg bot">
+        Morning! Welcome to the bar ☕ What can I grind or pull for you today? Ask for tasting notes, order a fresh brew, or ask for a food pairing.
+      </div>
+    </div>
+
+    <!-- Suggested Hand-Written Prompt Chips -->
+    <div class="quick-prompts">
+      <button onclick="openChatWithPrompt('What pairs best with a dark roast coffee?')">☕ What pairs with dark roast?</button>
+      <button onclick="openChatWithPrompt('Can I get an iced espresso drink?')">❄️ Iced drinks</button>
+      <button onclick="openChatWithPrompt('No, that is all for me today!')">🧾 Wrap up & Ticket</button>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="user-input" placeholder="Type your order or question to Sam..." autocomplete="off" />
+      <button type="submit" id="send-button">Write</button>
+    </form>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
